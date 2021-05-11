@@ -1,0 +1,50 @@
+
+[{
+    "userId": 5,
+    "transactionId": 121245642346,
+    "transactionDate": "28-03-2021T22:40",
+    "amount": 1000.0,
+    "status": 2,
+    "type": 1,
+    "direction": 2
+}, {
+    "userId": 1,
+    "transactionId": 979532345,
+    "transactionDate": "28-03-2021T22:00",
+    "amount": 1000.0,
+    "status": 2,
+    "type": 1,
+    "direction": 1
+}, {
+    "userId": 5,
+    "transactionId": 66634569,
+    "transactionDate": "20-03-2021T19:01",
+    "amount": 10.33,
+    "status": 2,
+    "type": 1,
+    "direction": 2
+}, {
+    "userId": 5,
+    "transactionId": 879934569,
+    "transactionDate": "14-02-2021T18:12",
+    "amount": 54.1,
+    "status": 1,
+    "type": 1,
+    "direction": 2
+}, {
+    "userId": 5,
+    "transactionId": 786544569,
+    "transactionDate": "20-03-2021T18:09",
+    "amount": 650.0,
+    "status": 1,
+    "type": 1,
+    "direction": 1
+}, {
+    "userId": 5,
+    "transactionId": 456934569,
+    "transactionDate": "20-04-2021T21:39",
+    "amount": 94,
+    "status": 2,
+    "type": 1,
+    "direction": 2
+}]

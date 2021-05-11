@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8K-zA-d9S">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Fdi-IO-PlV">
+            <objects>
+                <navigationController id="b8K-zA-d9S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="64f-qh-n6o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eaP-jW-wqH" kind="relationship" relationship="rootViewController" id="irT-aw-S96"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIE-fR-CfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1867" y="-646"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="qo7-CC-jFo">
+            <objects>
+                <viewController id="eaP-jW-wqH" customClass="PaymentHistoryVC" customModule="PaymentHistoryUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O35-fr-d4t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISX-mf-hrq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eQV-qb-hiS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeader" id="63c-7i-ztG" customClass="HeaderReusableView" customModule="PaymentHistoryUI" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4px-HQ-V8X">
+                                            <rect key="frame" x="8" y="10" width="398" height="30"/>
+                                            <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4px-HQ-V8X" secondAttribute="bottom" constant="2" id="OXK-6z-Wsz"/>
+                                        <constraint firstItem="4px-HQ-V8X" firstAttribute="top" secondItem="63c-7i-ztG" secondAttribute="topMargin" constant="2" id="Z4o-2N-pQg"/>
+                                        <constraint firstItem="4px-HQ-V8X" firstAttribute="leading" secondItem="63c-7i-ztG" secondAttribute="leadingMargin" id="pFE-CA-tr4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4px-HQ-V8X" secondAttribute="trailing" id="zi7-6k-7fv"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionHeaderlabel" destination="4px-HQ-V8X" id="VJv-Nx-3gR"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="eaP-jW-wqH" id="e7z-TZ-vhC"/>
+                                    <outlet property="delegate" destination="eaP-jW-wqH" id="K6k-12-Tjy"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Boj-eA-J3Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ISX-mf-hrq" firstAttribute="leading" secondItem="Boj-eA-J3Y" secondAttribute="leading" id="5LT-He-8qc"/>
+                            <constraint firstItem="Boj-eA-J3Y" firstAttribute="trailing" secondItem="ISX-mf-hrq" secondAttribute="trailing" id="hV6-eN-qgE"/>
+                            <constraint firstItem="Boj-eA-J3Y" firstAttribute="bottom" secondItem="ISX-mf-hrq" secondAttribute="bottom" id="mr9-zK-rbJ"/>
+                            <constraint firstItem="ISX-mf-hrq" firstAttribute="top" secondItem="Boj-eA-J3Y" secondAttribute="top" id="nAf-MD-H84"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="L93-bX-wek"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ISX-mf-hrq" id="zjb-8c-hD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gF3-nf-1ni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-965.21739130434787" y="-646.20535714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
